@@ -1,13 +1,13 @@
 clear all , clc
 
 #import image and define intensity
-%img = imread('peppers_trees.png');
+img = imread('CameraMan.JPG');
 
 #if image color must convert to GrayScale
-imgColor = imread('peppers_trees.png');
-img = GrayScale(imgColor);
+%imgColor = imread('CameraMan.jpg');
+%img = GrayScale(imgColor);
 
-VThreshold = 20000;
+VThreshold = 128;
 
 #call functions
 FinalImage = Binarizations(img,VThreshold);
