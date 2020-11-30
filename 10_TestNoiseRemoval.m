@@ -1,6 +1,6 @@
 clear all , clc
 
-[file,fpath] = uigetfile({"*.gif;*.jpg;*.jng","Choose the image"});
+[file,fpath] = uigetfile({"*.gif;*.jpg;*.png","Choose the image"});
 
 img = imread([fpath,file]);
 
