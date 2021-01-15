@@ -1,10 +1,10 @@
 #pkg load image
 
-#A=[1 2 3 4 5]
+A=[1 2 3 4 5]
 
-#B=[1:10]
+B=[1:10]
 
-#C=min(A)
+C=min(A)
 #C=max(B)
 
 #A = ones(8)
