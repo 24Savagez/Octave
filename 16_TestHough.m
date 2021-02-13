@@ -1,4 +1,4 @@
-clear all, close all
+lclear all, close all
 [file,fpath] = uigetfile({"*.jpg;*.png","Choose your image"});
 img = imread([fpath,file]);
 
