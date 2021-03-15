@@ -2,21 +2,23 @@ pkg load image
 
 clc, clear all
 
-img = imread("red_lights.jpg");
+img = imread("test1.jpg");
 figure(1)
 imshow(img)
 
+imghsv = rgb2hsv(img);
 
-gray = rgb2gray (img);
+bw = im2bw(imghsv);
 figure(2)
-imshow(gray)
-
-
-
-bw = im2bw(gray);
-figure(3)
 imshow(bw)
 
-h = imhist(gray);
+g = imfill(bw,"holes");
+figure(3)
+imshow(g)
+
+[centers,radii] = imfindcircles(imghsv,[20 80]);
 figure(4)
-imhist(gray)
+imshow(g)
+viscircles(centers,radii)
+
+
