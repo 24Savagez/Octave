@@ -11,7 +11,7 @@ img = imread('peppers_Bluehills.png');
 %title('Original')
 
 #check matrix size
-varsize = size(img)
+varsize = size(img);
 
 #show color on roll and collumn and color
 %temp = img(1,1,1)
@@ -117,7 +117,7 @@ KCMYF = uint16(round(KCMYF*(2^16)));
 %title('Covert from KCMY')
 
 figure(1)
-imshow(KCMYF)
+imshow(Rc)
 title('Covert from RGB')
 
 figure(2)

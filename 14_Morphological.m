@@ -1,4 +1,5 @@
 clear all,clc
+pkg load image
 
 [file,fpath] = uigetfile({"*.jpg;*.png","choose the image"});
 
