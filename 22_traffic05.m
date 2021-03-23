@@ -4,7 +4,7 @@ clear all
 pkg load image
 
 
-img = imread("test2.jpg");
+img = imread("test1.jpg");
 [nrow,ncol,color] = size(img);
 figure(1)
 imshow(img)
@@ -24,10 +24,10 @@ color_img_yellow = zeros(nrow,ncol,color);
 
 for i = 1:nrow
   for j = 1:ncol
-    if bw_img_green(i,j) == 0 
+    if bw_img_green(i,j) == 0
       color_img_green(i,j,:) = img(i,j,:);
     endif
-    if bw_img_red(i,j) == 0 
+    if bw_img_red(i,j) == 0
       color_img_red(i,j,:) = img(i,j,:);
     endif
     if bw_img_red(i,j) == 1 && bw_img_green(i,j) == 1
