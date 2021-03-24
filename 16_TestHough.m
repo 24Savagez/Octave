@@ -1,4 +1,5 @@
-lclear all, close all
+clear all, close all
+pkg load image
 [file,fpath] = uigetfile({"*.jpg;*.png","Choose your image"});
 img = imread([fpath,file]);
 
