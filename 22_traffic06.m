@@ -4,12 +4,13 @@ clear all
 pkg load image
 
 
-img = imread("test1.jpg");
+img = imread("test3.png");
+img = NoiseRemovals(img);
 [nrow,ncol,color] = size(img);
 figure(1)
 imshow(img)
 
-threshold = 135/255;
+threshold = 150/255;
 g_img = img(:,:,1);
 bw_img_green = im2bw(g_img,threshold);
 
@@ -39,13 +40,13 @@ color_img_yellow = zeros(nrow,ncol,color);
 
 for i = 1:nrow
   for j = 1:ncol
-    if bw_img_green(i,j) == 0 
+    if bw_img_green(i,j) == 0
       color_img_green(i,j,:) = img(i,j,:);
     endif
-    if bw_img_red(i,j) == 0 
+    if bw_img_red(i,j) == 0
       color_img_red(i,j,:) = img(i,j,:);
     endif
-    if bw_img_red(i,j) == 1 && bw_img_green(i,j) == 1
+    if bw_img_red(i,j) == 1 && bw_img_green(i,j) == 1 && bw_img_yellow(i,j) == 0
       color_img_yellow(i,j,:) = img(i,j,:);
     endif
   endfor
@@ -81,5 +82,6 @@ figure(6)
 imshow(img)
 viscircles(centers,radii)
 title("detected yellow")
+
 
 
